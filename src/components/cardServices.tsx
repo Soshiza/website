@@ -92,36 +92,30 @@ export function CardServices() {
         ) : null}
       </AnimatePresence>
 
-      {/* Lista de tarjetas con botón en español "Leer más" */}
-      <ul className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4 mt-20 sm:mt-24"> {/* Ajuste del margen superior */}
+      {/* Lista de tarjetas sin el título */}
+      <ul className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 mt-20 sm:mt-24">
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-2 sm:p-4 flex flex-col justify-between bg-white dark:bg-neutral-800 rounded-lg shadow hover:shadow-lg cursor-pointer"
+            className="p-4 sm:p-6 flex flex-col justify-between bg-white dark:bg-neutral-800 rounded-lg shadow hover:shadow-lg cursor-pointer"
           >
             <motion.div layoutId={`image-${card.title}-${id}`}>
               <Image
-                width={300}
-                height={200}
+                width={350}
+                height={250}
                 src={card.src}
                 alt={card.title}
-                className="h-32 sm:h-40 w-full rounded-lg object-cover object-top"
+                className="h-40 sm:h-52 w-full rounded-lg object-cover object-top"
               />
             </motion.div>
-            <div className="mt-2 sm:mt-4 text-center">
-              <motion.h3
-                layoutId={`title-${card.title}-${id}`}
-                className="font-bold text-neutral-800 dark:text-neutral-200 text-sm sm:text-base"
-              >
-                {card.title}
-              </motion.h3>
+            <div className="mt-4 sm:mt-6 text-center">
               <motion.button
                 layoutId={`button-${card.title}-${id}`}
-                className="mt-2 sm:mt-4 py-1 sm:py-2 px-4 rounded-full font-bold bg-green-500 text-white hover:bg-green-600 text-xs sm:text-sm"
+                className="mt-4 sm:mt-6 py-2 sm:py-3 px-6 rounded-full font-bold bg-green-500 text-white hover:bg-green-600 text-sm sm:text-base"
               >
-                Leer más {/* Botón en español */}
+                Leer más
               </motion.button>
             </div>
           </motion.div>
@@ -159,8 +153,8 @@ const cards = [
   {
     description: "Asesoramiento en marketing digital y publicidad online. Desarrollo de estrategias personalizadas para cada cliente. Implementación y seguimiento de las estrategias.",
     title: "Consultoria",
-    src: "/soshiza.png",
-    ctaText: "Leer más", // Cambiado a "Leer más"
+    src: "/consultoria.png",
+    ctaText: "Leer más",
     ctaLink: "#",
     content: () => {
       return <p>Consultoria detallada para tu negocio.</p>;
@@ -169,8 +163,8 @@ const cards = [
   {
     description: "Diseño y desarrollo de sitios web responsive y optimizados para SEO. Creación de landing pages para campañas específicas. Mantenimiento y actualización de sitios web.",
     title: "Diseño Web",
-    src: "/soshiza.png",
-    ctaText: "Leer más", // Cambiado a "Leer más"
+    src: "/diseno-web.png",
+    ctaText: "Leer más",
     ctaLink: "#",
     content: () => {
       return <p>Soluciones completas de diseño web.</p>;
@@ -179,8 +173,8 @@ const cards = [
   {
     description: "Creación y publicación de contenido atractivo. Implementación de estrategias de crecimiento de seguidores. Análisis de datos y generación de informes.",
     title: "Marketing en redes sociales",
-    src: "/soshiza.png",
-    ctaText: "Leer más", // Cambiado a "Leer más"
+    src: "/marketing.png",
+    ctaText: "Leer más",
     ctaLink: "#",
     content: () => {
       return <p>Soluciones para crecimiento en redes sociales.</p>;
@@ -189,8 +183,8 @@ const cards = [
   {
     description: "Creación y gestión de campañas de publicidad en Google Ads, Facebook Ads, etc. Segmentación precisa de la audiencia objetivo. Optimización de las campañas para obtener el máximo retorno de la inversión (ROI).",
     title: "Publicidad online",
-    src: "/soshiza.png",
-    ctaText: "Leer más", // Cambiado a "Leer más"
+    src: "/publicidad-online.png",
+    ctaText: "Leer más",
     ctaLink: "#",
     content: () => {
       return <p>Estrategias de publicidad optimizadas.</p>;
@@ -199,8 +193,8 @@ const cards = [
   {
     description: "Optimización del sitio web para los motores de búsqueda. Análisis de palabras clave y selección de las más relevantes. Implementación de estrategias de SEO on-page y off-page.",
     title: "SEO (Search Engine Optimization)",
-    src: "/soshiza.png",
-    ctaText: "Leer más", // Cambiado a "Leer más"
+    src: "/SEO.png",
+    ctaText: "Leer más",
     ctaLink: "#",
     content: () => {
       return <p>Mejora tu presencia en motores de búsqueda.</p>;
@@ -209,8 +203,8 @@ const cards = [
   {
     description: "Creación de contenido original y atractivo para blogs, redes sociales, y sitio web. Redacción de artículos y publicaciones en blog Optimización del contenido para SEO.",
     title: "Marketing de contenidos",
-    src: "/soshiza.png",
-    ctaText: "Leer más", // Cambiado a "Leer más"
+    src: "/marketing-contenido.png",
+    ctaText: "Leer más",
     ctaLink: "#",
     content: () => {
       return <p>Creación y optimización de contenido atractivo.</p>;
