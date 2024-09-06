@@ -2,8 +2,20 @@
 import React, { useRef } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import '@/app/globals.css';
+import { Tangerine } from "next/font/google";
+import { Tajawal } from "next/font/google";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+
+const tangerine = Tangerine({
+  subsets: ["latin"],
+  weight: "700"
+});
+
+const tajawal =Tajawal({
+  subsets: ["latin"],
+  weight: "400"
+})
 
 export const StickyScroll = ({
   content,
@@ -70,7 +82,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-2xl font-bold text-black"
+                className={`text-[4rem] md:text-[4rem] font-bold text-black  ${tangerine.className}`}
               >
                 {item.title}
               </motion.h2>
@@ -81,7 +93,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg text-gray-500 max-w-sm mt-10"
+                className={`text-lg text-gray-500 max-w-sm mt-10 ${tajawal.className}`}
               >
                 {item.description}
               </motion.p>

@@ -2,8 +2,9 @@
 import React from "react";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Image from "next/image";
-import { AuroraBackground } from "@/components/ui/aurora-background";
 import { FloatingNavBar } from "@/components/floating-navbar";
+
+
 
 const content = [
   {
@@ -11,8 +12,14 @@ const content = [
     description:
       "Somos una agencia de publicidad digital comprometida con la excelencia y la innovación. Nuestro enfoque integral y personalizado nos ha posicionado como líderes en la región, brindando soluciones que potencian la presencia online de nuestros clientes y los ayudan a alcanzar sus objetivos comerciales.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Acerca de Nosotros
+      <div className="h-full w-full  flex items-center justify-center text-white">
+        <Image
+          src="/soshiza2.png"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
       </div>
     ),
   },
@@ -22,14 +29,13 @@ const content = [
       "Ricardo Bravo, fotógrafo y productor audiovisual, es el corazón creativo de nuestra agencia. Su pasión por capturar la esencia de cada marca se refleja en imágenes impactantes que conectan con el público objetivo. Su experiencia y creatividad son pilares fundamentales en la creación de contenido visual de alta calidad que enriquece nuestras campañas de marketing.",
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
-        {/*<Image
-          src="/linear.webp"
+        <Image
+          src="/rebm.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
           alt="linear board demo"
-        />*/}
-        Ricardo Bravo
+        />
       </div>
     ),
   },
