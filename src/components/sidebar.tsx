@@ -12,7 +12,7 @@ export const Sidebar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
-  // Handle click outside to close sidebar
+  // Manejo del clic fuera del sidebar para cerrarlo
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
@@ -31,7 +31,7 @@ export const Sidebar = () => {
     };
   }, [isVisible]);
 
-  // Close sidebar on link click
+  // Cerrar el sidebar al hacer clic en un enlace
   const handleLinkClick = () => {
     setIsVisible(false);
   };
@@ -61,9 +61,9 @@ export const Sidebar = () => {
 
   return (
     <>
-      {/* Icono del menú con el texto "Menú" y animación tipo pulse */}
+      {/* Ícono del menú con el texto "Menú" y animación pulse */}
       <motion.div
-        className="fixed top-4 left-4 z-50 flex items-center p-2 bg-gray-200 dark:bg-gray-800 rounded-md mt-24 md:mt-24 cursor-pointer"
+        className="fixed top-36 left-4 z-50 flex items-center p-2 bg-gray-200 dark:bg-gray-800 rounded-md cursor-pointer" // top-36 para 8rem de distancia desde la parte superior
         onClick={() => setIsVisible(true)}
         initial={{ scale: 1 }}
         animate={{ scale: [1, 1.1, 1], opacity: [1, 0.8, 1] }}
@@ -93,7 +93,7 @@ export const Sidebar = () => {
               exit={{ x: -200, opacity: 0 }}
               transition={{ duration: 0.3 }}
               className={cn(
-                "fixed top-0 left-0 h-full w-64 bg-white dark:bg-black z-50 shadow-md mt-24",
+                "fixed top-36 left-0 h-full w-64 bg-white dark:bg-black z-50 shadow-md",
                 "flex flex-col items-start justify-start space-y-4 p-6"
               )}
             >
