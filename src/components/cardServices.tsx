@@ -93,7 +93,7 @@ export function CardServices() {
       </AnimatePresence>
 
       {/* Lista de tarjetas sin el título */}
-      <ul className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 mt-20 sm:mt-24">
+      <ul className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 mt-20 sm:mt-32">
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
@@ -113,7 +113,7 @@ export function CardServices() {
             <div className="mt-4 sm:mt-6 text-center">
               <motion.button
                 layoutId={`button-${card.title}-${id}`}
-                className="mt-4 sm:mt-6 py-2 sm:py-3 px-6 rounded-full font-bold bg-green-500 text-white hover:bg-green-600 text-sm sm:text-base"
+                className="mt-4 sm:mt-6 py-2 sm:py-3 px-6 rounded-full font-bold bg-[#77CEEA] text-white hover:bg-[#3cc6f3] text-sm sm:text-base"
               >
                 Leer más
               </motion.button>
