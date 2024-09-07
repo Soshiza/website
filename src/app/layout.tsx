@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-
+import SocialSidebar from "@/components/socialSidebar"; // Importa tu componente SocialSidebar
 
 export const metadata: Metadata = {
   title: "Sōshiza - Agencia de Servicios Digitales en Chile",
@@ -68,7 +68,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
-        <AuroraBackground>{children}</AuroraBackground>
+        <AuroraBackground>
+          {children}
+        </AuroraBackground>
+        <SocialSidebar /> {/* Coloca aquí el componente para que aparezca en todas las páginas */}
       </body>
     </html>
   );
