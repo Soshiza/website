@@ -3,6 +3,7 @@ import "./globals.css";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import SocialSidebar from "@/components/socialSidebar"; // Importa tu componente SocialSidebar
 
+// Mantén el objeto metadata, pero quita la propiedad viewport de aquí
 export const metadata: Metadata = {
   title: "Sōshiza - Agencia de Servicios Digitales en Chile",
   description:
@@ -57,7 +58,12 @@ export const metadata: Metadata = {
       "Marketing digital, redes sociales, desarrollo de páginas web y fotografía para PYMEs en Chile. Operamos en Santiago, Valparaíso, Concepción, Temuco, Punta Arenas, y más.",
   },
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1",
+};
+
+// Exporta el viewport por separado
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
