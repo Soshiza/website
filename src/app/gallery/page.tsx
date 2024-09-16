@@ -105,6 +105,7 @@ const Gallery = () => {
                     height={500}
                     className="w-full h-auto object-cover rounded cursor-pointer select-none"
                     draggable={false}
+                    unoptimized
                     onClick={() => handleImageClick(index, imageData)}
                   />
                 </motion.div>
