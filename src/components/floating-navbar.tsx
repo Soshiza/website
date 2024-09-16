@@ -11,22 +11,22 @@ export function FloatingNavBar() {
     {
       name: "Inicio",
       link: "/",
-      icon: <IoHomeOutline className="h-6 w-6 text-neutral-500 dark:text-white block lg:hidden" />, // Solo se muestra en móviles
+      icon: <IoHomeOutline className="h-6 w-6 text-neutral-500 dark:text-white block lg:hidden" />, // Solo en móviles
     },
     {
       name: "Acerca de",
       link: "/about",
-      icon: <FcAbout className="h-6 w-6 text-neutral-500 dark:text-white block lg:hidden" />, // Solo se muestra en móviles
+      icon: <FcAbout className="h-6 w-6 text-neutral-500 dark:text-white block lg:hidden" />, // Solo en móviles
     },
     {
       name: "Servicios",
       link: "/services",
-      icon: <MdWorkOutline className="h-6 w-6 text-neutral-500 dark:text-white block lg:hidden" />, // Solo se muestra en móviles
+      icon: <MdWorkOutline className="h-6 w-6 text-neutral-500 dark:text-white block lg:hidden" />, // Solo en móviles
     },
     {
       name: "Multimedia",
       link: "/multimedia",
-      icon: <RiGalleryLine className="h-6 w-6 text-neutral-500 dark:text-white block lg:hidden" />, // Solo se muestra en móviles
+      icon: <RiGalleryLine className="h-6 w-6 text-neutral-500 dark:text-white block lg:hidden" />, // Solo en móviles
     },
   ];
   return (

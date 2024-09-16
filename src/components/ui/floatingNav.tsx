@@ -35,12 +35,11 @@ export const FloatingNav = ({
             duration: 0.2,
           }}
           className={cn(
-            "flex max-w-fit fixed top-6 md:top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-lg z-[5000] pr-2 md:pr-4 pl-4 md:pl-10 py-2 md:py-4 items-center justify-center space-x-4 md:space-x-8", // Ajustes de padding y espaciado en móvil
+            "flex max-w-full lg:max-w-fit fixed top-2 md:top-5 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white shadow-lg z-[5000] pr-2 md:pr-3 pl-3 md:pl-10 py-1 md:py-1 items-center justify-center gap-4 lg:gap-2", // Ajustes de ancho y separación solo en móvil
             className
           )}
         >
           <div className="filter brightness-0">
-            {/* Ajustar el tamaño del logo en móvil */}
             <Image src="/soshiza.png" alt="Logo" width={50} height={50} className="w-10 h-10 md:w-20 md:h-20" />
           </div>
           {navItems.map((navItem: any, idx: number) => (
@@ -48,10 +47,10 @@ export const FloatingNav = ({
               key={`link=${idx}`}
               href={navItem.link}
               className={cn(
-                "relative dark:text-neutral-50 items-center flex space-x-1 md:space-x-2 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 text-sm md:text-lg" // Ajuste de tamaño de texto y espaciado en móvil
+                "relative dark:text-neutral-50 items-center flex space-x-2 lg:space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 text-sm md:text-lg"
               )}
             >
-              <span className="w-4 h-4 md:w-6 md:h-6">{navItem.icon}</span> {/* Ajustar íconos en móvil */}
+              <span className="w-6 h-6 md:w-8 md:h-8">{navItem.icon}</span> {/* Ajustar íconos */}
               <span className="hidden sm:block">{navItem.name}</span>
             </Link>
           ))}
@@ -68,4 +67,3 @@ export const FloatingNav = ({
     </>
   );
 };
-
