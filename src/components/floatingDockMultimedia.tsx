@@ -15,14 +15,14 @@ export function FloatingDockMultimedia() {
       icon: (
         <IconPhoto className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "/gallery",
+      href: "/multimedia/gallery",
     },
     {
       title: "Proyectos",
       icon: (
         <IconBriefcase className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "projects",
+      href: "/multimedia/projects",
     },
     {
       title: "Soshiza",
@@ -44,14 +44,14 @@ export function FloatingDockMultimedia() {
       icon: (
         <IconArticle className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "/blog",
+      href: "/multimedia/blog",
     },
     {
       title: "Podcast",
       icon: (
         <IconBrandApplePodcast className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "/podcast",
+      href: "/multimedia/podcast",
     },
   ];
 

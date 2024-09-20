@@ -11,6 +11,7 @@ import { signOut } from 'firebase/auth';
 import { authentication } from '@/config/firebase';
 import { useRouter } from 'next/navigation';
 import UploadImageForm from '@/components/uploadImageForm';
+import UploadProjectsForm from '@/components/uploadProjectsForm';
 import { Tangerine } from "next/font/google";
 
 const tangerine = Tangerine({
@@ -26,7 +27,12 @@ const Galeria = () => (
   </div>
 );
 
-const Proyectos = () => <div>Componente de Proyectos</div>;
+const Proyectos = () => (
+  <div className="w-full flex flex-col items-center justify-center mt-20 mb-20"> {/* Ajustamos márgenes superior e inferior */}
+    <h2 className={`text-7xl text-black text-center ${tangerine.className}`}>Proyectos</h2>
+    <UploadProjectsForm /> 
+  </div>
+);
 const Blog = () => <div>Componente de Blog</div>;
 const Podcasts = () => <div>Componente de Podcasts</div>;
 
